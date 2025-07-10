@@ -14,7 +14,7 @@ export function Header() {
 						height={32}
 						className="object-contain"
 					/>
-					<span className="text-sand text-2xl font-bold">STROIT DESIGNS</span>
+					<span className="text-sand text-xl font-bold">STROIT DESIGNS</span>
 				</Link>
 
 				<nav className="hidden md:flex space-x-8 font-bold ">
@@ -22,7 +22,7 @@ export function Header() {
 						<Link
 							key={item.url}
 							href={item.url}
-							className="uppercase tracking-wider text-md text-mountain hover:text-vanilla">
+							className="uppercase tracking-wider text-sm text-mountain hover:text-vanilla">
 							{item.label}
 						</Link>
 					))}
