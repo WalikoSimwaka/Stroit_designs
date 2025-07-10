@@ -4,11 +4,15 @@ import { useState } from "react";
 export default function ContactPage() {
 	const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-	const handleChange = (e: any) => {
+	// Use React.ChangeEvent for input and textarea changes
+	const handleChange = (
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+	) => {
 		setForm({ ...form, [e.target.name]: e.target.value });
 	};
 
-	const handleSubmit = (e: any) => {
+	// Use React.FormEvent for form submission
+	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		alert("Message sent!");
 		setForm({ name: "", email: "", message: "" });
